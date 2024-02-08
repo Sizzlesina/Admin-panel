@@ -32,7 +32,9 @@
             ><img class="logo" src="assets/images/logo.png" alt="Logo"
           /></span>
 
-          <span class="d-md-none pointer" id="menu-toggle"><i class="fas fa-ellipsis-h"></i></span>
+          <span class="d-md-none pointer" id="menu-toggle"
+            ><i class="fas fa-ellipsis-h"></i
+          ></span>
         </section>
       </section>
       <!-- left header -->
@@ -43,17 +45,19 @@
           <section>
             <!-- main 1 -> part 1 -->
             <span class="mr-5">
-              <span class="search-area d-none">
-                <i class="fas fa-times pointer"></i>
-                <input type="text" class="search-input" />
+              <span id="search-area" class="search-area d-none">
+                <i id="search-area-hide" class="fas fa-times pointer"></i>
+                <input id="search-input" type="text" class="search-input" />
                 <i class="fas fa-search pointer"></i>
               </span>
-              <i class="fas fa-search p-1 d-none d-md-inline pointer"></i>
+              <i
+                id="search-toggle"
+                class="fas fa-search p-1 d-none d-md-inline pointer"></i>
             </span>
             <!-- main 1 -> part 2 -->
-            <span class="pointer p-1 d-none d-md-inline mr-5">
-              <i class="fas fa-compress d-none"></i>
-              <i class="fas fa-expand"></i>
+            <span id="full-screen" class="pointer p-1 d-none d-md-inline mr-5">
+              <i id="screen-compress" class="fas fa-compress d-none"></i>
+              <i id="screen-expand" class="fas fa-expand"></i>
             </span>
           </section>
 
