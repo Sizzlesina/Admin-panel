@@ -1,1 +1,1 @@
-Admin panel template done coded with bootstrap and html css
+Admin panel template done with two versions : 1- Bootstrap and 2- React
