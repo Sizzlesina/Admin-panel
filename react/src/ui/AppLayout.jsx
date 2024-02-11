@@ -1,11 +1,11 @@
 /** @format */
 
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 function AppLayout() {
   return (
     <div>
-      App Layout
+      <span className='text-8xl'>App Layout </span>
       <Outlet />
     </div>
   );
