@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import SidebarHeader from "./SidebarHeader";
 import BodyHeader from "./BodyHeader";
+import { HeadersProvider } from "../../contexts/HeadersContext";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -17,10 +18,12 @@ const StyledHeader = styled.header`
 
 function Header() {
   return (
+    <HeadersProvider>
     <StyledHeader className="md:block">
       <SidebarHeader />
       <BodyHeader />
     </StyledHeader>
+    </HeadersProvider>
   );
 }
 export default Header;

@@ -1,9 +1,9 @@
 /** @format */
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import Home from "./pages/Home";
-import Error from "./pages/Error";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import AppLayout from './components/UI/AppLayout';
+import Home from './pages/Home';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
     ],

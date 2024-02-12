@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import CommentsListItem from "./CommentsListItem";
+import styled from 'styled-components';
+import CommentsListItem from './CommentsListItem';
 
 const StyledCommentsList = styled.section`
   position: absolute;
@@ -13,43 +13,43 @@ const StyledCommentsList = styled.section`
 `;
 const FAKE_COMMENTS = [
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 1,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 2,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 3,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 4,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 5,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 6,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 7,
   },
   {
-    title: "محمد هاشمی",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    src: './images/avatar-2.jpg',
     id: 8,
   },
 ];
@@ -60,10 +60,10 @@ function CommentsList() {
         <input
           type="text"
           placeholder="جستجو ..."
-          className="outline-none border-none rounded-sm"
+          className="rounded-sm border-none outline-none"
         />
       </section>
-      <section className="h-[calc(100%-6rem)] overflow-auto scrollbar-none">
+      <section className="scrollbar-none h-[calc(100%-6rem)] overflow-auto">
         <ul className="list-group">
           {FAKE_COMMENTS.map((comment) => (
             <CommentsListItem comment={comment} key={comment.id} />

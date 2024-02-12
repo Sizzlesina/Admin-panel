@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import NotificationListItem from "./NotificationListItem";
+import styled from 'styled-components';
+import NotificationListItem from './NotificationListItem';
 
 const StyledNotificationList = styled.section`
   position: absolute;
@@ -12,24 +12,24 @@ const StyledNotificationList = styled.section`
 `;
 const FAKE_NOTIFICATION = [
   {
-    title: "محمد هاشمی",
-    message: "این یک متن تستی است ",
-    createdAt: "30 دقیقه پیش",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    message: 'این یک متن تستی است ',
+    createdAt: '30 دقیقه پیش',
+    src: './images/avatar-2.jpg',
     id: 1,
   },
   {
-    title: "محمد هاشمی",
-    message: "این یک متن تستی است ",
-    createdAt: "30 دقیقه پیش",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    message: 'این یک متن تستی است ',
+    createdAt: '30 دقیقه پیش',
+    src: './images/avatar-2.jpg',
     id: 2,
   },
   {
-    title: "محمد هاشمی",
-    message: "این یک متن تستی است ",
-    createdAt: "30 دقیقه پیش",
-    src: "./avatar-2.jpg",
+    title: 'محمد هاشمی',
+    message: 'این یک متن تستی است ',
+    createdAt: '30 دقیقه پیش',
+    src: './images/avatar-2.jpg',
     id: 3,
   },
 ];
@@ -39,7 +39,7 @@ function NotificationList() {
       <section className="flex-between">
         <span className="px-2">نوتیفیکیشن ها</span>
         <span className="px-2">
-          <span className="bg-red-600 text-white text-sm  px-2 py-0.5 rounded">
+          <span className="rounded bg-red-600 px-2  py-0.5 text-sm text-white">
             جدید
           </span>
         </span>
