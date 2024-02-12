@@ -1,3 +1,74 @@
+/** @format */
+
+@font-face {
+  font-family: IRANSans;
+  src: url("./fonts/IRANSans/IRANSansWeb_Light.woff") format("woff");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    direction: rtl;
+    text-align: right;
+    font-family: IRANSans;
+  }
+}
+@layer components {
+  .image {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.3rem;
+    margin: 0.2rem;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .list-group {
+    @apply flex flex-col mb-0 px-0;
+  }
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .list-group-item:hover,
+  .list-group-item:active,
+  .list-group-item:focus {
+    z-index: 1;
+    color: #495057;
+    text-decoration: none;
+    background-color: #f8f9fa;
+  }
+  .list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+  .media {
+    @apply flex items-start;
+  }
+  .media-body {
+    @apply flex-1;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+@layer utilities {
+  .flex-between {
+    @apply flex justify-between;
+  }
+  .flex-around {
+    @apply flex justify-around;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}

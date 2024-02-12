@@ -64,12 +64,7 @@ $(document).ready(function () {
       $(".sidebar-group-link")
         .children(".sidebar-dropdown-toggle")
         .children(".angle")
-        .removeClass("fa-angle-left");
-
-      $(".sidebar-group-link")
-        .children(".sidebar-dropdown-toggle")
-        .children(".angle")
-        .addClass("fa-angle-down");
+        .removeClass("fa-angle-down");
 
       $(this)
         .parent(".sidebar-group-link")

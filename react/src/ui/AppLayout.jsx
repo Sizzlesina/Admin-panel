@@ -1,13 +1,16 @@
 /** @format */
 
 import { Outlet } from "react-router";
+import Header from "./Header/Header";
 
 function AppLayout() {
   return (
-    <div>
-      <span className='text-8xl'>App Layout </span>
-      <Outlet />
-    </div>
+    <section className="mt-[3.5rem] flex -z-50">
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+    </section>
   );
 }
 

@@ -1,9 +1,7 @@
+/** @format */
+
 function Home() {
-  return (
-    <div>
-      Home
-    </div>
-  )
+  return <div className=""></div>;
 }
 
-export default Home
+export default Home;
