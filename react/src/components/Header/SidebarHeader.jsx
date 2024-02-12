@@ -1,24 +1,24 @@
-import { FaEllipsisH } from "react-icons/fa";
-import { BsToggleOff, BsToggleOn } from "react-icons/bs";
+import { FaEllipsisH } from 'react-icons/fa';
+import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
 /** @format */
 function SidebarHeader() {
   return (
-    <section className="w-[100%] md:basis-56 bg-[#404e67] text-[#dcdcdc] select-none">
-      <section className="flex-between md:flex-row-reverse px-2">
-        <span className="inline md:hidden cursor-pointer">
+    <section className="w-[100%] select-none bg-[#404e67] text-[#dcdcdc] md:basis-56">
+      <section className="flex-between px-2 md:flex-row-reverse">
+        <span className="inline cursor-pointer md:hidden">
           <BsToggleOff className="inline select-none" />
         </span>
-        <span className="hidden md:inline cursor-pointer">
+        <span className="hidden cursor-pointer md:inline">
           <BsToggleOn className="inline select-none" />
         </span>
         <span>
           <img
-            src="./logo.png"
+            src="./images/logo.png"
             alt="logo"
-            className="max-h-14 inline select-none"
+            className="inline max-h-14 cursor-pointer select-none"
           />
         </span>
-        <span className="md:hidden cursor-pointer select-none">
+        <span className="cursor-pointer select-none md:hidden">
           <FaEllipsisH className="inline" />
         </span>
       </section>

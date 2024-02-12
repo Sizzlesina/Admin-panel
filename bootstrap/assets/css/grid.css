@@ -233,6 +233,8 @@
 .sidebar-group-link-active > .sidebar-dropdown {
   height: auto !important;
   display: block !important;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .sidebar-dropdown-toggle {
