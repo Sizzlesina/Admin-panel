@@ -1,9 +1,11 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useCallback, useEffect, useRef, useState } from 'react';
 
 const HeadersContext = createContext({
   showNotification: false,
   showComments: false,
   showProfile: false,
+  showSearch: false,
+  toggleSidebar: false,
 });
 
 function HeadersProvider({ children }) {
@@ -11,35 +13,56 @@ function HeadersProvider({ children }) {
   const [showComments, setShowComments] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-
+  const [toggleSidebar, setToggleSidebar] = useState(false);
   // handle clicks for comments
-  const handleClickComments = () => {
-    if (showNotification || showProfile) return;
-    setShowComments(!showComments);
-  };
+  const handleClickComments = useCallback(() => {
+    setShowComments((prevState) => !prevState);
+    setShowProfile(false);
+    setShowNotification(false);
+  }, []);
 
+  const handleClickCommentsWrapper = () => {
+    handleClickComments();
+  };
   // handle clicks for notifications
-  const handleClickNotification = () => {
-    if (showComments || showProfile) return;
-    setShowNotification(!showNotification);
+  const handleClickNotification = useCallback(() => {
+    setShowNotification((prevState) => !prevState);
+    setShowProfile(false);
+    setShowComments(false);
+  }, []);
+
+  const handleClickNotificationWrapper = () => {
+    handleClickNotification();
+  };
+  // handle clicks for profile section
+  const handleClickProfile = useCallback(() => {
+    setShowProfile((prevState) => !prevState);
+    setShowComments(false);
+    setShowNotification(false);
+  }, []);
+
+  const handleClickProfileWrapper = () => {
+    handleClickProfile();
   };
 
-  // handle clicks for profile section
-  const handleClickProfile = () => {
-    if (showComments || showNotification) return;
-    setShowProfile(!showProfile);
-  };
+  // show sidebar using a click
+  const handleToggleSidebar = useCallback(() => {
+    setToggleSidebar((prevState) => !prevState);
+  }, []);
+
   return (
     <HeadersContext.Provider
       value={{
-        handleClickComments,
-        handleClickNotification,
-        handleClickProfile,
         showProfile,
         showNotification,
         showComments,
         showSearch,
         setShowSearch,
+        toggleSidebar,
+        handleToggleSidebar,
+        handleClickProfileWrapper,
+        handleClickNotificationWrapper,
+        handleClickCommentsWrapper,
       }}
     >
       {children}

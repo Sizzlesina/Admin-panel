@@ -1,8 +1,8 @@
 /** @format */
-import styled from "styled-components";
-import SidebarHeader from "./SidebarHeader";
-import BodyHeader from "./BodyHeader";
-import { HeadersProvider } from "../../contexts/HeadersContext";
+import styled from 'styled-components';
+import SidebarHeader from './SidebarHeader';
+import BodyHeader from './BodyHeader';
+import { HeadersProvider } from '../../contexts/HeadersContext';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -14,15 +14,19 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   z-index: 1000;
   align-items: stretch;
+
+  @media only screen and (max-width: 767.98px) {
+    display: block;
+  }
 `;
 
 function Header() {
   return (
     <HeadersProvider>
-    <StyledHeader className="md:block">
-      <SidebarHeader />
-      <BodyHeader />
-    </StyledHeader>
+      <StyledHeader>
+        <SidebarHeader />
+        <BodyHeader />
+      </StyledHeader>
     </HeadersProvider>
   );
 }

@@ -1,14 +1,23 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
+import Sidebar from '../Sidebar/Sidebar';
+import styled from 'styled-components';
 
+const StyledAppLayout = styled.section`
+  margin-top: 3.5rem;
+  height: 100vh;
+  z-index: 100000;
+  display: flex;
+`;
 function AppLayout() {
   return (
-    <section>
+    <>
       <Header />
-      <main>
+      <StyledAppLayout>
+        <Sidebar />
         <Outlet />
-      </main>
-    </section>
+      </StyledAppLayout>
+    </>
   );
 }
 

@@ -3,7 +3,7 @@ import CommentsListItem from './CommentsListItem';
 
 const StyledCommentsList = styled.section`
   position: absolute;
-  left: 0.0125rem;
+  left: -9.5rem;
   height: calc(100vh - 3.5rem);
   width: 18rem;
   background-color: #ffffff;
@@ -56,14 +56,14 @@ const FAKE_COMMENTS = [
 function CommentsList() {
   return (
     <StyledCommentsList>
-      <section className="border-b px-4">
+      <section className="border-b px-3">
         <input
           type="text"
           placeholder="جستجو ..."
           className="rounded-sm border-none outline-none"
         />
       </section>
-      <section className="scrollbar-none h-[calc(100%-6rem)] overflow-auto">
+      <section className="scrollbar-none h-[calc(100%-5rem)] overflow-auto">
         <ul className="list-group">
           {FAKE_COMMENTS.map((comment) => (
             <CommentsListItem comment={comment} key={comment.id} />
