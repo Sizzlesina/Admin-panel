@@ -5,9 +5,10 @@ const StyledTitle = styled.section`
   padding: 0 1rem;
   margin-top: 1rem;
   color: #999999;
+
 `;
 
-function Title({ icon, children }) {
+function Title({ icon, children, className }) {
   if (icon)
     return (
       <StyledTitle>
@@ -15,6 +16,7 @@ function Title({ icon, children }) {
         <span>{children}</span>
       </StyledTitle>
     );
+
   return <StyledTitle className="text-xs">{children}</StyledTitle>;
 }
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import NotificationListItem from './NotificationListItem';
+import { FAKE_NOTIFICATION } from '../../../helpers/constants.jsx';
 
 const StyledNotificationList = styled.section`
   position: absolute;
@@ -10,29 +11,7 @@ const StyledNotificationList = styled.section`
   box-shadow: 0 1px 20px 0 rgba(70, 90, 100, 0.4);
   border-radius: 0.25rem;
 `;
-const FAKE_NOTIFICATION = [
-  {
-    title: 'محمد هاشمی',
-    message: 'این یک متن تستی است ',
-    createdAt: '30 دقیقه پیش',
-    src: './images/avatar-2.jpg',
-    id: 1,
-  },
-  {
-    title: 'محمد هاشمی',
-    message: 'این یک متن تستی است ',
-    createdAt: '30 دقیقه پیش',
-    src: './images/avatar-2.jpg',
-    id: 2,
-  },
-  {
-    title: 'محمد هاشمی',
-    message: 'این یک متن تستی است ',
-    createdAt: '30 دقیقه پیش',
-    src: './images/avatar-2.jpg',
-    id: 3,
-  },
-];
+
 function NotificationList() {
   return (
     <StyledNotificationList>

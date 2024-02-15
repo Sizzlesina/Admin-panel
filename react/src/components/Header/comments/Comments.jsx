@@ -5,11 +5,11 @@ import { useRef, useState } from 'react';
 
 function Comments() {
   const { handleClickCommentsWrapper, showComments } = useHeaders();
-  const ref = useRef(null);
+  const ref = useRef();
   const [isOutsideClick, setIsOutsideClick] = useState(false);
 
   const handleClick = (e) => {
-    if (!ref.current.contains(e.target)) {
+    if (ref.current && !ref.current.contains(e.target)) {
       setIsOutsideClick(true);
     } else {
       setIsOutsideClick(false);

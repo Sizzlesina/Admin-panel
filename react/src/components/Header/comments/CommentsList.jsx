@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CommentsListItem from './CommentsListItem';
+import { FAKE_COMMENTS } from '../../../helpers/constants.jsx';
 
 const StyledCommentsList = styled.section`
   position: absolute;
@@ -11,48 +12,7 @@ const StyledCommentsList = styled.section`
   box-shadow: 0 1px 20px 0 rgba(70, 90, 100, 0.08);
   border-right: 1px solid rgba(0, 0, 0, 0.125);
 `;
-const FAKE_COMMENTS = [
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 1,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 2,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 3,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 4,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 5,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 6,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 7,
-  },
-  {
-    title: 'محمد هاشمی',
-    src: './images/avatar-2.jpg',
-    id: 8,
-  },
-];
+
 function CommentsList() {
   return (
     <StyledCommentsList>

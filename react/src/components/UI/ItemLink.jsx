@@ -10,6 +10,8 @@ const StyledItemLink = styled.a`
   border: none;
   color: #dcdcdc;
   transition: all 0.3s;
+  -webkit-user-select: none;
+  user-select: none;
 
   &:hover {
     text-decoration: none;

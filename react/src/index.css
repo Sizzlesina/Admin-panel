@@ -60,6 +60,71 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .info-box-body h5 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    padding: 0.5rem;
+  }
+  .info-box-body p {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding: 0.125rem;
+  }
+  .info-box-icon {
+    font-size: 2rem;
+    padding: 0.2rem;
+  }
+  .bg-custom-yellow {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#feb798),
+      to(#fe9365)
+    );
+    background: linear-gradient(to right, #feb798, #fe9365);
+  }
+  .bg-custom-green {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#0df3a3),
+      to(#0ac282)
+    );
+    background: linear-gradient(to right, #0df3a3, #0ac282);
+  }
+  .bg-custom-pink {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#fe909d),
+      to(#fe5d78)
+    );
+    background: linear-gradient(to right, #fe909d, #fe5d78);
+  }
+  .bg-custom-blue {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#01dbdf),
+      to(#01a9ac)
+    );
+    background: linear-gradient(to right, #01dbdf, #01a9ac);
+  }
+  .icon {
+  }
+  .angle {
+  }
 }
 @layer utilities {
   .flex-between {
