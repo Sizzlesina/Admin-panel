@@ -18,8 +18,8 @@ function ProfileList() {
   return (
     <StyledProfileList>
       <section className="list-group rounded">
-        {PROFILE_OPTIONS.map((option) => (
-          <ProfileListItem option={option} key={option.id} />
+        {PROFILE_OPTIONS.map((option, index) => (
+          <ProfileListItem option={option} key={index} />
         ))}
       </section>
     </StyledProfileList>

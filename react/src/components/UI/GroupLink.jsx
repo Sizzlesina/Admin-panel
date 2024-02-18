@@ -1,8 +1,8 @@
-import { FaAngleDoubleLeft } from 'react-icons/fa';
 import { FaAngleDown } from 'react-icons/fa';
 import { FaAngleLeft } from 'react-icons/fa';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledGroupLink = styled.section`
   font-size: 0.8rem;
@@ -52,6 +52,7 @@ function GroupLink({ icon, children, listItem, toggleOffIcon, toggleOnIcon }) {
   const handleClick = () => {
     setDropdownToggle((prevState) => !prevState);
   };
+
   if (toggleOnIcon && toggleOffIcon)
     return (
       <StyledGroupLink>
@@ -63,10 +64,10 @@ function GroupLink({ icon, children, listItem, toggleOffIcon, toggleOnIcon }) {
         </DropdownToggle>
         {dropdownToggle && (
           <Dropdown>
-            {listItem.map((item) => (
-              <a href="##" key={item.id}>
+            {listItem.map((item, index) => (
+              <Link to={item.route} key={index}>
                 {item.title}
-              </a>
+              </Link>
             ))}
           </Dropdown>
         )}
@@ -87,10 +88,10 @@ function GroupLink({ icon, children, listItem, toggleOffIcon, toggleOnIcon }) {
       </DropdownToggle>
       {dropdownToggle && (
         <Dropdown>
-          {listItem.map((item) => (
-            <a href="##" key={item.id}>
+          {listItem.map((item, index) => (
+            <Link to={item.route} key={index}>
               {item.title}
-            </a>
+            </Link>
           ))}
         </Dropdown>
       )}

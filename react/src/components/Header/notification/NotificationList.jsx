@@ -24,8 +24,8 @@ function NotificationList() {
         </span>
       </section>
       <ul className="list-group">
-        {FAKE_NOTIFICATION.map((item) => (
-          <NotificationListItem item={item} key={item.id} />
+        {FAKE_NOTIFICATION.map((item, index) => (
+          <NotificationListItem item={item} key={index} />
         ))}
       </ul>
     </StyledNotificationList>

@@ -36,8 +36,8 @@ function TextContent() {
           <p>در این بخش اطلاعاتی در مورد کاربران به شما داده می شود</p>
         </TextContentHeader>
         <TextContentBody>
-          {TEXT.map((item) => (
-            <p className="font-light" key={item.id}>
+          {TEXT.map((item, index) => (
+            <p className="font-light" key={index}>
               {item.text}
             </p>
           ))}

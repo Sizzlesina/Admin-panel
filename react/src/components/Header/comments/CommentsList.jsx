@@ -25,8 +25,8 @@ function CommentsList() {
       </section>
       <section className="scrollbar-none h-[calc(100%-5rem)] overflow-auto">
         <ul className="list-group">
-          {FAKE_COMMENTS.map((comment) => (
-            <CommentsListItem comment={comment} key={comment.id} />
+          {FAKE_COMMENTS.map((comment, index) => (
+            <CommentsListItem comment={comment} key={index} />
           ))}
         </ul>
       </section>
