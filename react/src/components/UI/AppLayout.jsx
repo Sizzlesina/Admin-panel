@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 import Sidebar from './Sidebar';
 import styled from 'styled-components';
+import { useHeaders } from '../../hooks/useHeaders';
 
 const StyledAppLayout = styled.section`
   margin-top: 3.5rem;
@@ -10,11 +11,12 @@ const StyledAppLayout = styled.section`
   display: flex;
 `;
 function AppLayout() {
+  const { isOpenSidebar } = useHeaders();
   return (
     <>
       <Header />
       <StyledAppLayout>
-        <Sidebar />
+        {isOpenSidebar && <Sidebar />}
         <Outlet />
       </StyledAppLayout>
     </>

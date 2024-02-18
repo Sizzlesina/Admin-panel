@@ -32,9 +32,9 @@ const SidebarWrapper = styled.section`
 `;
 function Sidebar() {
   return (
-    <StyledSidebar className="hidden md:inline">
+    <StyledSidebar className="md:inline">
       <SidebarContainer>
-        <SidebarWrapper className="relative">
+        <SidebarWrapper>
           <ItemLink icon={<AiFillHome className=" ml-3 inline" />}>
             خانه
           </ItemLink>

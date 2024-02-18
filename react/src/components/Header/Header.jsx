@@ -22,12 +22,10 @@ const StyledHeader = styled.header`
 
 function Header() {
   return (
-    <HeadersProvider>
       <StyledHeader>
         <SidebarHeader />
         <BodyHeader />
       </StyledHeader>
-    </HeadersProvider>
   );
 }
 export default Header;

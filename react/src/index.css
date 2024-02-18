@@ -121,10 +121,6 @@
     );
     background: linear-gradient(to right, #01dbdf, #01a9ac);
   }
-  .icon {
-  }
-  .angle {
-  }
 }
 @layer utilities {
   .flex-between {

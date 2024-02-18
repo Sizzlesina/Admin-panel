@@ -13,7 +13,7 @@ function HeadersProvider({ children }) {
   const [showComments, setShowComments] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   // handle clicks for comments
   const handleClickComments = useCallback(() => {
     setShowComments((prevState) => !prevState);
@@ -47,7 +47,7 @@ function HeadersProvider({ children }) {
 
   // show sidebar using a click
   const handleToggleSidebar = useCallback(() => {
-    setToggleSidebar((prevState) => !prevState);
+    setIsOpenSidebar((prevState) => !prevState);
   }, []);
 
   return (
@@ -57,8 +57,8 @@ function HeadersProvider({ children }) {
         showNotification,
         showComments,
         showSearch,
+        isOpenSidebar,
         setShowSearch,
-        toggleSidebar,
         handleToggleSidebar,
         handleClickProfileWrapper,
         handleClickNotificationWrapper,

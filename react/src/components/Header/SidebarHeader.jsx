@@ -1,16 +1,27 @@
 import { FaEllipsisH } from 'react-icons/fa';
 import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
+import { useHeaders } from '../../hooks/useHeaders';
 /** @format */
 function SidebarHeader() {
+  const { handleToggleSidebar, isOpenSidebar } = useHeaders();
   return (
     <section className="w-[100%] select-none bg-[#404e67] text-[#dcdcdc] md:basis-56">
       <section className="flex-between px-2 md:flex-row-reverse">
-        <span className="inline cursor-pointer md:hidden">
-          <BsToggleOff className="inline select-none" />
-        </span>
-        <span className="hidden cursor-pointer md:inline">
-          <BsToggleOn className="inline select-none" />
-        </span>
+        {isOpenSidebar ? (
+          <span className="cursor-pointer ">
+            <BsToggleOn
+              className="inline select-none"
+              onClick={handleToggleSidebar}
+            />
+          </span>
+        ) : (
+          <span className="cursor-pointer ">
+            <BsToggleOff
+              className="inline select-none"
+              onClick={handleToggleSidebar}
+            />
+          </span>
+        )}
         <span>
           <img
             src="./images/logo.png"

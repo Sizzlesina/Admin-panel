@@ -34,7 +34,7 @@ const CardFooter = styled.section`
 `;
 function Card({ item }) {
   return (
-    <StyledCard className={item.className}>
+    <StyledCard className={`${item.className} mb-4`}>
       <CardBody>
         <section className="flex-between">
           <section className="info-box-body">

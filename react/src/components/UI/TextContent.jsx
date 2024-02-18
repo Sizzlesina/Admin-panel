@@ -29,7 +29,7 @@ const TextContentBody = styled.section`
 `;
 function TextContent() {
   return (
-    <section className="gap gap-col-1">
+    <section>
       <TextContentContainer>
         <TextContentHeader>
           <h5>بخش کاربران</h5>
