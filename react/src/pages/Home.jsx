@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CardRow from '../components/UI/Card/CardRow';
+import CardRow from '../components/Card/CardRow';
 import { CARD_ITEMS } from '../helpers/constants';
 import TextContent from '../components/UI/TextContent';
 

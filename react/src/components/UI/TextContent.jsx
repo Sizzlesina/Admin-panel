@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import TextContentItem from './TextContentItem';
 import { TEXT } from '../../helpers/constants';
 
 const TextContentContainer = styled.section`
@@ -10,13 +9,13 @@ const TextContentContainer = styled.section`
 `;
 const TextContentHeader = styled.section`
   h5 {
-    font-size: 1rem;
+    font-size: 0.93rem;
     font-weight: bold;
     line-height: 1;
     margin-block-end: 0.5rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
     color: #777;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -24,7 +23,7 @@ const TextContentHeader = styled.section`
 `;
 const TextContentBody = styled.section`
   p {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
     margin-bottom: 1rem;
   }
 `;

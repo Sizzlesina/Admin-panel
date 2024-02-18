@@ -49,14 +49,13 @@ const Dropdown = styled.section`
 `;
 function GroupLink({ icon, children, listItem, toggleOffIcon, toggleOnIcon }) {
   const [dropdownToggle, setDropdownToggle] = useState(false);
-
-  const handleDropdownToggle = () => {
+  const handleClick = () => {
     setDropdownToggle((prevState) => !prevState);
   };
   if (toggleOnIcon && toggleOffIcon)
     return (
       <StyledGroupLink>
-        <DropdownToggle onClick={handleDropdownToggle}>
+        <DropdownToggle onClick={handleClick}>
           {icon}
           <span>
             {children} {dropdownToggle ? toggleOnIcon : toggleOffIcon}
@@ -75,10 +74,7 @@ function GroupLink({ icon, children, listItem, toggleOffIcon, toggleOnIcon }) {
     );
   return (
     <StyledGroupLink>
-      <DropdownToggle
-        className="flex justify-around"
-        onClick={handleDropdownToggle}
-      >
+      <DropdownToggle className="flex justify-around" onClick={handleClick}>
         {icon}
         <span>{children}</span>
         <span>
