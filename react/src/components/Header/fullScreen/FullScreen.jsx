@@ -1,29 +1,15 @@
-import { useState } from 'react';
 import { AiOutlineExpand, AiOutlineCompress } from 'react-icons/ai';
+import { useHeaders } from '../../../hooks/useHeaders';
 function FullScreen() {
-  const [isFullScreen, setIsFullScreen] = useState(false);
-
-  const handleFullScreen = () => {
-    if (
-      (document.documentElement && document.fullscreenElement !== null) ||
-      (!document.mozFullScreen && !document.webkitIsFullScreen)
-    ) {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.mozRequestFullScreen) {
-        document.documentElement.mozRequestFullScreen();
-      } else if (document.documentElement.webkitRequestFullScreen) {
-        document.documentElement.webkitRequestFullScreen(
-          Element.ALLOW_KEYBOARD_INPUT,
-        );
-      }
-    }
-  };
+  const { handleFullScreen, isFullScreen } = useHeaders();
 
   return (
     <span className="mr-10 hidden cursor-pointer p-1 md:inline">
       {isFullScreen ? (
-        <AiOutlineCompress className="inline cursor-pointer select-none" />
+        <AiOutlineCompress
+          className="inline cursor-pointer select-none"
+          onClick={handleFullScreen}
+        />
       ) : (
         <AiOutlineExpand
           className="inline cursor-pointer select-none"

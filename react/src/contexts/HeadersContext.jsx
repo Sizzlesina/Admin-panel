@@ -1,4 +1,4 @@
-import { createContext, useCallback, useEffect, useRef, useState } from 'react';
+import { createContext, useCallback, useState } from 'react';
 
 const HeadersContext = createContext({
   showNotification: false,
@@ -6,6 +6,7 @@ const HeadersContext = createContext({
   showProfile: false,
   showSearch: false,
   toggleSidebar: false,
+  isFullScreen: false,
 });
 
 function HeadersProvider({ children }) {
@@ -15,6 +16,7 @@ function HeadersProvider({ children }) {
   const [showSearch, setShowSearch] = useState(false);
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
   const [isOpenHeader, setIsOpenHeader] = useState(false);
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
   // handle clicks for comments
   const handleClickComments = useCallback(() => {
@@ -57,7 +59,20 @@ function HeadersProvider({ children }) {
     setIsOpenHeader((prevState) => !prevState);
   };
 
-
+  // handler function to enter and exit the fullscreen
+  const handleFullScreen = () => {
+    if (document.fullscreenElement) {
+      document
+        .exitFullscreen()
+        .then(() => {
+          setIsFullScreen(false);
+        })
+        .catch((err) => console.error(err));
+    } else {
+      document.documentElement.requestFullscreen();
+      setIsFullScreen(true);
+    }
+  };
   return (
     <HeadersContext.Provider
       value={{
@@ -67,9 +82,11 @@ function HeadersProvider({ children }) {
         showSearch,
         isOpenSidebar,
         isOpenHeader,
+        isFullScreen,
         setShowSearch,
         handleToggleHeader,
         handleToggleSidebar,
+        handleFullScreen,
         handleClickProfileWrapper,
         handleClickNotificationWrapper,
         handleClickCommentsWrapper,
