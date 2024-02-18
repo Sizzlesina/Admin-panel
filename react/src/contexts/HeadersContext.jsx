@@ -14,6 +14,8 @@ function HeadersProvider({ children }) {
   const [showProfile, setShowProfile] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
+  const [isOpenHeader, setIsOpenHeader] = useState(false);
+
   // handle clicks for comments
   const handleClickComments = useCallback(() => {
     setShowComments((prevState) => !prevState);
@@ -50,6 +52,11 @@ function HeadersProvider({ children }) {
     setIsOpenSidebar((prevState) => !prevState);
   }, []);
 
+  // show body header using a click
+  const handleToggleHeader = () => {
+    setIsOpenHeader((prevState) => !prevState);
+  };
+
   return (
     <HeadersContext.Provider
       value={{
@@ -58,7 +65,9 @@ function HeadersProvider({ children }) {
         showComments,
         showSearch,
         isOpenSidebar,
+        isOpenHeader,
         setShowSearch,
+        handleToggleHeader,
         handleToggleSidebar,
         handleClickProfileWrapper,
         handleClickNotificationWrapper,

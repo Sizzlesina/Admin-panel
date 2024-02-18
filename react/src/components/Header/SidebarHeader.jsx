@@ -3,7 +3,8 @@ import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
 import { useHeaders } from '../../hooks/useHeaders';
 /** @format */
 function SidebarHeader() {
-  const { handleToggleSidebar, isOpenSidebar } = useHeaders();
+  const { handleToggleSidebar, isOpenSidebar, handleToggleHeader } =
+    useHeaders();
   return (
     <section className="w-[100%] select-none bg-[#404e67] text-[#dcdcdc] md:basis-56">
       <section className="flex-between px-2 md:flex-row-reverse">
@@ -30,7 +31,7 @@ function SidebarHeader() {
           />
         </span>
         <span className="cursor-pointer select-none md:hidden">
-          <FaEllipsisH className="inline" />
+          <FaEllipsisH className="inline" onClick={handleToggleHeader} />
         </span>
       </section>
     </section>

@@ -19,7 +19,7 @@ function Profile() {
   document.addEventListener('click', handleClick);
 
   return (
-    <span className="relative ml-6 md:ml-5" ref={ref}>
+    <span className="relative ml-6  md:ml-5" ref={ref}>
       <span className="cursor-pointer" onClick={handleClickProfileWrapper}>
         <img
           src="./images/avatar-2.jpg"
