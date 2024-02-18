@@ -57,6 +57,7 @@ function HeadersProvider({ children }) {
     setIsOpenHeader((prevState) => !prevState);
   };
 
+
   return (
     <HeadersContext.Provider
       value={{

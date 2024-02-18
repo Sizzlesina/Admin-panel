@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar/Sidebar';
 import styled from 'styled-components';
 import { useHeaders } from '../../hooks/useHeaders';
 

@@ -1,8 +1,7 @@
 /** @format */
 import styled from 'styled-components';
-import SidebarHeader from './SidebarHeader';
+import SidebarHeader from '../Sidebar/SidebarHeader';
 import BodyHeader from './BodyHeader';
-import { HeadersProvider } from '../../contexts/HeadersContext';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -22,10 +21,10 @@ const StyledHeader = styled.header`
 
 function Header() {
   return (
-      <StyledHeader>
-        <SidebarHeader />
-        <BodyHeader />
-      </StyledHeader>
+    <StyledHeader>
+      <SidebarHeader />
+      <BodyHeader />
+    </StyledHeader>
   );
 }
 export default Header;
