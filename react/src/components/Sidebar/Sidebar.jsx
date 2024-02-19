@@ -6,9 +6,9 @@ import { BsBarChartLineFill } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import styled from 'styled-components';
-import ItemLink from '../elements/ItemLink';
-import Title from '../elements/Title';
-import GroupLink from '../elements/GroupLink';
+import ItemLink from '../elements/ItemLink.jsx';
+import Title from '../elements/Title.jsx';
+import GroupLink from '../elements/GroupLink.jsx';
 import {
   SETTINGS_LIST,
   TEXTS_LIST,

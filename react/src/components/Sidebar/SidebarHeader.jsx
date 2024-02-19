@@ -2,7 +2,6 @@ import { FaEllipsisH } from 'react-icons/fa';
 import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
 import { useHeaders } from '../../hooks/useHeaders';
 import { Link } from 'react-router-dom';
-/** @format */
 function SidebarHeader() {
   const { handleToggleSidebar, isOpenSidebar, handleToggleHeader } =
     useHeaders();
