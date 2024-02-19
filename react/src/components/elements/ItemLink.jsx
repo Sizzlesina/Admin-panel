@@ -21,21 +21,15 @@ const StyledItemLink = styled.a`
   }
 `;
 
-function ItemLink({ icon, children, home = false }) {
+function ItemLink({ icon, children, to }) {
   if (icon)
     return (
       <StyledItemLink>
         {icon}
-        <span>{children}</span>
+        <Link to={to}>{children}</Link>
       </StyledItemLink>
     );
-  if (home === true)
-    return (
-      <StyledItemLink>
-        {icon}
-        <Link to={'/'}>{children}</Link>
-      </StyledItemLink>
-    );
+
   return <StyledItemLink>{children}</StyledItemLink>;
 }
 

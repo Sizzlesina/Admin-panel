@@ -1,6 +1,7 @@
 import { FaEllipsisH } from 'react-icons/fa';
 import { BsToggleOff, BsToggleOn } from 'react-icons/bs';
 import { useHeaders } from '../../hooks/useHeaders';
+import { Link } from 'react-router-dom';
 /** @format */
 function SidebarHeader() {
   const { handleToggleSidebar, isOpenSidebar, handleToggleHeader } =
@@ -24,11 +25,13 @@ function SidebarHeader() {
           </span>
         )}
         <span>
-          <img
-            src="./images/logo.png"
-            alt="logo"
-            className="inline max-h-14 cursor-pointer select-none"
-          />
+          <Link to={'/'}>
+            <img
+              src="./images/logo.png"
+              alt="logo"
+              className="inline max-h-14 cursor-pointer select-none"
+            />
+          </Link>
         </span>
         <span className="cursor-pointer select-none md:hidden">
           <FaEllipsisH className="inline" onClick={handleToggleHeader} />

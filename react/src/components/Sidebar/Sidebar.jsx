@@ -35,11 +35,13 @@ function Sidebar() {
     <StyledSidebar className="md:inline">
       <SidebarContainer>
         <SidebarWrapper>
-          <ItemLink home={true} icon={<AiFillHome className=" ml-3 inline" />}>
+          <ItemLink to={'/'} icon={<AiFillHome className=" ml-3 inline" />}>
             خانه
           </ItemLink>
           <Title type="sidebar">بخش محتوی</Title>
-          <ItemLink icon={<FaBars className="ml-3 inline" />}>دسته ها</ItemLink>
+          <ItemLink icon={<FaBars className="ml-3 inline" to={''} />}>
+            دسته ها
+          </ItemLink>
           <GroupLink
             icon={<BsBarChartLineFill className="ml-3 inline" />}
             listItem={TEXTS_LIST}
