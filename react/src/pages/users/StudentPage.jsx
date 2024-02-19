@@ -47,7 +47,7 @@ function StudentPage() {
                 شماره دانشجویی
               </th>
               <th scope="col" class="px-6 py-3">
-                تاریخ تولد
+                دوره
               </th>
               <th scope="col" class="px-6 py-3">
                 <span class="sr-only">Edit</span>
@@ -76,7 +76,7 @@ function StudentPage() {
               </th>
               <td class="px-6 py-4">مهندسی کامپیوتر</td>
               <td class="px-6 py-4">414401412</td>
-              <td class="px-6 py-4">1402/6/6</td>
+              <td class="px-6 py-4">ساختمان داده</td>
               <td class="px-6 py-4 text-right">
                 <a
                   href="##"
@@ -106,8 +106,8 @@ function StudentPage() {
                 حسین مرادی
               </th>
               <td class="px-6 py-4">مهندسی کامپیوتر</td>
-              <td class="px-6 py-4">414401412 PC</td>
-              <td class="px-6 py-4">1402/6/6</td>
+              <td class="px-6 py-4">414401412</td>
+              <td class="px-6 py-4">ساختمان داده</td>
               <td class="px-6 py-4 text-right">
                 <a
                   href="##"
@@ -138,7 +138,7 @@ function StudentPage() {
               </th>
               <td class="px-6 py-4">مهندسی کامپیوتر</td>
               <td class="px-6 py-4">414401412</td>
-              <td class="px-6 py-4">1402/6/6</td>
+              <td class="px-6 py-4">ساختمان داده</td>
               <td class="px-6 py-4 text-right">
                 <a
                   href="##"
