@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import CardRow from '../components/Card/CardRow';
 import { CARD_ITEMS } from '../helpers/constants';
-import TextContent from '../components/UI/TextContent';
+import TextContent from '../components/elements/TextContent';
 import { useHeaders } from '../hooks/useHeaders';
 
 const StyledHome = styled.main`
@@ -10,7 +10,7 @@ const StyledHome = styled.main`
   background-color: #f3f3f3;
 `;
 
-function Home() {
+function HomePage() {
   const { isOpenSidebar } = useHeaders();
 
   return (
@@ -28,4 +28,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
