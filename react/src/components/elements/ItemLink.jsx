@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledItemLink = styled.a`
@@ -10,6 +11,7 @@ const StyledItemLink = styled.a`
   border: none;
   color: #dcdcdc;
   transition: all 0.3s;
+  cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
 
@@ -19,12 +21,19 @@ const StyledItemLink = styled.a`
   }
 `;
 
-function ItemLink({ icon, children }) {
+function ItemLink({ icon, children, home = false }) {
   if (icon)
     return (
       <StyledItemLink>
         {icon}
         <span>{children}</span>
+      </StyledItemLink>
+    );
+  if (home === true)
+    return (
+      <StyledItemLink>
+        {icon}
+        <Link to={'/'}>{children}</Link>
       </StyledItemLink>
     );
   return <StyledItemLink>{children}</StyledItemLink>;

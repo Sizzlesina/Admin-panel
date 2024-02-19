@@ -88,39 +88,39 @@ export const PROFILE_OPTIONS = [
 export const TEXTS_LIST = [
   {
     title: 'مقالات',
-    route: '/articles',
+    route: '/posts/articles',
   },
   {
     title: 'پست ها',
-    route: '/posts',
+    route: '/posts/post',
   },
   {
     title: 'دوره ها',
-    route: '/courses',
+    route: '/posts/courses',
   },
 ];
 export const USERS_LIST = [
   {
     title: 'ادمین',
-    route: '/admin',
+    route: '/users/admin',
   },
   {
     title: 'مدرس ها',
-    route: '/teachers',
+    route: '/users/teachers',
   },
   {
     title: 'دانشجو',
-    route: '/student',
+    route: '/users/student',
   },
 ];
 export const SETTINGS_LIST = [
   {
     title: 'منوی هدر',
-    route: '/header/menu',
+    route: '/setting/menu',
   },
   {
     title: 'منوی فوتر',
-    route: '/header/footer',
+    route: '/setting/footer',
   },
 ];
 export const CARD_ITEMS = [
